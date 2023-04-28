@@ -1,0 +1,8 @@
+.app {
+  box-sizing: border-box;
+  max-width: 1366px;
+  height: 768px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #000;
+}
