@@ -1,0 +1,40 @@
+.todo-task {
+  width: 595px;
+  height: 54px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+.todo-task.active {
+  background-color: #ededed;
+}
+
+.todo-task p {
+  font-size: 22px;
+  margin-left: 24px;
+}
+.todo-buttons {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.svg-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 54px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.svg-container:nth-last-of-type(1):hover {
+  background-color: #FC5E5E;
+}
+.svg-container:nth-last-of-type(2):hover {
+  background-color: #5EFC8D;
+}

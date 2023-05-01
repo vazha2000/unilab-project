@@ -1,0 +1,44 @@
+.navbar {
+  background-color: #000;
+  height: 98px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 28px;
+}
+.navbar-logo {
+  font-size: 36px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-logo span {
+  height: 51px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.img-container {
+  height: 68px;
+  width: 68px;
+  border-radius: 50%;
+}
+.img-container img {
+  height: 68px;
+  width: 68px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.user-info span {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+
+
