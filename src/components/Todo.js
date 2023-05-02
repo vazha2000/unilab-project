@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/Task.css";
+import "../styles/Todo.css";
 
 /**
  *
@@ -12,11 +12,10 @@ import "../styles/Task.css";
  */
 const Todo = ({ todo, deleteTask, markTaskCompleted }) => {
   return (
-    <div>
+    
       <div
         className={todo.completed ? "todo-task active" : "todo-task"}
-        key={todo.id}
-      >
+        key={todo.id}>
         <p>{todo.text}</p>
         <div className="todo-buttons">
           <div
@@ -55,7 +54,7 @@ const Todo = ({ todo, deleteTask, markTaskCompleted }) => {
           </div>
         </div>
       </div>
-    </div>
+  
   );
 };
 

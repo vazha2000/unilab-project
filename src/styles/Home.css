@@ -22,6 +22,7 @@
   text-transform: capitalize;
   margin-bottom: 149px;
   line-height: 76px;
+  text-align: center;
 }
 
 .home-btn {
@@ -44,4 +45,21 @@
 }
 .home-btn:focus {
   opacity: 0.5;
+}
+
+@media only screen and (max-width: 768px) {
+  .home-text {
+    font-size: 40px;
+    line-height: 56px;
+    margin-bottom: 80px;
+  }
+
+  .home-btn {
+    height: 64px;
+    width: 256px;
+  }
+
+  .home-btn span {
+    font-size: 32px;
+  }
 }

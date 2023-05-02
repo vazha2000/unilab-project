@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import Navbar from "../components/Navbar";
-import "../styles/Todo.css";
+import "../styles/Todos.css";
 import Todo from "../components/Todo";
 
 const syncToDB = (items) => {
@@ -64,7 +64,7 @@ const Todos = () => {
     }
   };
   return (
-    <div className="todo-container">
+    <div className="todos-container">
       <Navbar />
       <div className="todo">
         <div className="todo-text">add your daily tasks</div>
