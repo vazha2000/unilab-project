@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import '../styles/Navbar.css'
+import { AuthContext } from '../context/AuthContext';
 
-const Navbar = ({onSignOut}) => {
+const Navbar = () => {
+  const {handleSignOut} = useContext(AuthContext)
   
   const [isClicked, setIsClicked] = useState(false);
 
@@ -16,7 +18,7 @@ const Navbar = ({onSignOut}) => {
     localStorage.removeItem('username');
     localStorage.removeItem('photo');
     localStorage.removeItem('items');
-    onSignOut();
+    handleSignOut();
   }
 
   return (

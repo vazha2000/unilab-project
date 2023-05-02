@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "../styles/SignIn.css";
 import { useNavigate } from "react-router-dom";
 import { convertFileToBase64 } from "../utils.js";
+import { AuthContext } from "../context/AuthContext";
 
 const SignIn = ({ onSignIn }) => {
   const [username, setUsername] = useState("");
@@ -9,6 +10,7 @@ const SignIn = ({ onSignIn }) => {
   const [formError, setFormError] = useState(null);
 
   const navigate = useNavigate();
+  const {handleSignIn} = useContext(AuthContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -30,7 +32,7 @@ const SignIn = ({ onSignIn }) => {
       navigate("/todo-tasks");
     }
     localStorage.setItem("username", username);
-    onSignIn();
+    handleSignIn();
   };
 
   return (

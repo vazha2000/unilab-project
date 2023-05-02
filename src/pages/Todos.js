@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Navbar from "../components/Navbar";
 import "../styles/Todo.css";
 import Todo from "../components/Todo";
@@ -15,7 +15,7 @@ const readFromDB = () => {
   }
 };
 
-const Todos = ({onSignOut}) => {
+const Todos = () => {
   const [todos, setTodos] = useState(readFromDB());
   const [newTodoText, setNewTodoText] = useState("");
 
@@ -65,7 +65,7 @@ const Todos = ({onSignOut}) => {
   };
   return (
     <div className="todo-container">
-      <Navbar onSignOut={onSignOut} />
+      <Navbar />
       <div className="todo">
         <div className="todo-text">add your daily tasks</div>
         <div className="add-task">
