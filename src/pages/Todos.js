@@ -15,7 +15,7 @@ const readFromDB = () => {
   }
 };
 
-const Todos = () => {
+const Todos = ({onSignOut}) => {
   const [todos, setTodos] = useState(readFromDB());
   const [newTodoText, setNewTodoText] = useState("");
 
@@ -58,9 +58,14 @@ const Todos = () => {
     };
     setTodos(newTodos);
   };
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      addTask();
+    }
+  };
   return (
     <div className="todo-container">
-      <Navbar />
+      <Navbar onSignOut={onSignOut} />
       <div className="todo">
         <div className="todo-text">add your daily tasks</div>
         <div className="add-task">
@@ -68,6 +73,7 @@ const Todos = () => {
             type="text"
             placeholder="my task"
             onChange={(e) => setNewTodoText(e.target.value)}
+            onKeyDown={handleKeyDown}
           />
           <button onClick={addTask}>
             <span>Add</span>

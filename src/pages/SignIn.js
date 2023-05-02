@@ -3,27 +3,34 @@ import "../styles/SignIn.css";
 import { useNavigate } from "react-router-dom";
 import { convertFileToBase64 } from "../utils.js";
 
-const SignIn = () => {
+const SignIn = ({ onSignIn }) => {
   const [username, setUsername] = useState("");
   const [photo, setPhoto] = useState(null);
+  const [formError, setFormError] = useState(null);
 
   const navigate = useNavigate();
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
+    if (!username || !photo) {
+      setFormError("Please add a photo and fill in your name");
+      return;
+    }
+
     if (photo) {
       try {
         const base64 = await convertFileToBase64(photo);
         localStorage.setItem("photo", base64);
         navigate("/todo-tasks");
       } catch (error) {
-        return alert("upload photo again!!!");
+        return setFormError("Failed to upload photo. Upload photo again!!!");
       }
     } else {
       navigate("/todo-tasks");
     }
     localStorage.setItem("username", username);
+    onSignIn();
   };
 
   return (
@@ -70,6 +77,7 @@ const SignIn = () => {
               placeholder="your name"
               onChange={(e) => setUsername(e.target.value)}
             />
+            {formError && <div className="error-message">{formError}</div>}
           </div>
           <div className="button-container">
             <button className="signIn-button" type="submit">

@@ -11,16 +11,6 @@ import "../styles/Task.css";
  * @returns
  */
 const Todo = ({ todo, deleteTask, markTaskCompleted }) => {
-  // const [isDoneList, setIsDoneList] = useState(
-  //   Array(todo.length).fill(false)
-  // );
-
-  const toggleIsDone = (index) => {
-    // const newList = [...isDoneList];
-    // newList[index] = !newList[index];
-    // setIsDoneList(newList);
-  };
-
   return (
     <div>
       <div
@@ -29,7 +19,10 @@ const Todo = ({ todo, deleteTask, markTaskCompleted }) => {
       >
         <p>{todo.text}</p>
         <div className="todo-buttons">
-          <div className="svg-container" onClick={() => markTaskCompleted(todo)}>
+          <div
+            className="svg-container"
+            onClick={() => markTaskCompleted(todo)}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24.714"

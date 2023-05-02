@@ -21,6 +21,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  position: relative;
 }
 
 .img-container {
@@ -33,11 +34,35 @@
   width: 68px;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
+  transition:  0.1s ease-out;
+}
+.img-container img:hover {
+  scale: 0.95;
 }
 
 .user-info span {
   font-size: 22px;
   font-weight: 300;
+}
+.signout-container {
+  background-color: #e6e2e2;
+  position: absolute;
+  width: 100%;
+  top: 83px;
+  right: 0;
+  height: 40px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: #000;
+  cursor: pointer;
+}
+.signout-container:hover {
+  color: #000;
+  background-color: #cccaca;
 }
 
 
