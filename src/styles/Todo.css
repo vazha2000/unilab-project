@@ -42,10 +42,6 @@
 
 @media (max-width: 768px) {
   .todo-task {
-    /* width: 100%; */
     width: 90%;
   }
-}
-@media (min-width: 300px) {
-  
 }
