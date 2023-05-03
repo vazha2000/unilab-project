@@ -105,7 +105,7 @@
 } 
 .error-message {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   color: rgb(242, 2, 2);
   font-size: 20px;
   width: 487px;
