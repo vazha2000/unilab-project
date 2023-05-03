@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import "../styles/Todos.css";
 import Todo from "../components/Todo";

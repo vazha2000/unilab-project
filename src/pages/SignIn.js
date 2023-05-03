@@ -45,7 +45,7 @@ const SignIn = ({ onSignIn }) => {
             <label htmlFor="photo">
               <div className="choose-photo">
                 {photo ? (
-                  <img src={URL.createObjectURL(photo)} alt="profile picture" />
+                  <img src={URL.createObjectURL(photo)} alt="" />
                 ) : (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

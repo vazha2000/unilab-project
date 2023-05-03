@@ -29,7 +29,7 @@ const Navbar = () => {
       <div className='user-info'>
         <span>{storedUsername}</span>
         <div className='img-container'>
-          <img src={storedPhoto} onClick={handleImgClick}/>
+          <img src={storedPhoto} onClick={handleImgClick} alt=''/>
           {isClicked && <div className='signout-container' onClick={logout}>Sign Out</div>}
         </div>
       </div>
